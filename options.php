@@ -196,6 +196,12 @@ function optionsframework_options()
             'std' => '#dd9933',
             'type' => 'color'
         ),
+        array(
+            'name' => 'Background Color Set #4',
+            'id' => 'color_bg_set4',
+            'std' => '#eeee22',
+            'type' => 'color'
+        ),
         
         // Anchor Link Colors Set #1
         array(
