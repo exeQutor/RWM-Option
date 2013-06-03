@@ -49,7 +49,7 @@ function optionsframework_options()
     return array(
         /* Social Profiles */
         array(
-            'name' => 'Social Profiles',
+            'name' => 'Social',
             'type' => 'heading'
         ),
         array(
@@ -85,7 +85,7 @@ function optionsframework_options()
         
         /* Company Info */
         array(
-            'name' => 'Company Info',
+            'name' => 'Company',
             'type' => 'heading'
         ),
         array(
@@ -128,7 +128,7 @@ function optionsframework_options()
         
         /* Fonts & Colors */
         array(
-            'name' => 'Fonts &amp; Colors',
+            'name' => 'Typography',
             'type' => 'heading'
         ),
         array(
@@ -201,7 +201,7 @@ function optionsframework_options()
             'id' => 'color_bg_set4',
             'std' => '#eeee22',
             'type' => 'color'
-        ),
+        ),        
         
         // Anchor Link Colors Set #1
         array(
@@ -257,7 +257,7 @@ function optionsframework_options()
         
         /* Blog Manager */
         array(
-            'name' => 'Blog Manager',
+            'name' => 'Blog',
             'type' => 'heading'
         ),
         array(
@@ -302,7 +302,7 @@ function optionsframework_options()
         
         /* Contact Page */
         array(
-            'name' => 'Contact Page',
+            'name' => 'Contact',
             'type' => 'heading'
         ),
         array(
@@ -384,6 +384,31 @@ function optionsframework_options()
             'std' => '50',
             'class' => 'mini',
             'type' => 'text'
+        ),
+        
+        /* Inclusion */
+        array(
+            'name' => 'Inclusion',
+            'type' => 'heading'
+        ),
+        array(
+            'name' => 'Button Color',
+            'id' => 'inc_btn_color',
+            'std' => '#0088cc',
+            'type' => 'color'
+        ),
+        array(
+            'name' => 'Button Text',
+            'id' => 'inc_btn_text',
+            'std' => 'Learn More..',
+            'class' => 'mini',
+            'type' => 'text'
+        ),
+        array(
+            'name' => 'Button Text Color',
+            'id' => 'inc_btn_text_color',
+            'std' => '#ffffff',
+            'type' => 'color'
         )
     );
 }
