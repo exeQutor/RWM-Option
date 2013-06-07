@@ -6,7 +6,7 @@ Easily manage your Theme Options with a friendly admin interface inside WordPres
 
 ### `rwm_option`
 
-Use only one main function to retrieve all `options`.
+Use only one main function to retrieve all `options` by passing an option `key`.
 
     rwm_option(key)
     
