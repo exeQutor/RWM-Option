@@ -20,6 +20,12 @@ class RWMo_Meta_Box {
     }
     
     function callback($post) {
+        $text_alignment_array = array(
+            'left' => 'Left',
+            'center' => 'Center',
+            'right' => 'Right'
+        );
+        
         $show_hide_array = array(
             'inherit' => 'Inherit',
             'show' => 'Show',
@@ -28,7 +34,9 @@ class RWMo_Meta_Box {
         
         $options = array(
             'heading' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading', true),
+            'heading_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading_alignment', true),
             'tagline' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline', true),
+            'tagline_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline_alignment', true),
             'action_url' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url', true),
             'show_sidebar' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_sidebar', true),
             'show_comments' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_comments', true)
@@ -55,7 +63,9 @@ class RWMo_Meta_Box {
         $options = $_POST[RWMo_PREFIX . 'post_options'];
         
         update_post_meta($post_id, RWMo_PREFIX . 'post_heading', $options['heading']);
+        update_post_meta($post_id, RWMo_PREFIX . 'post_heading_alignment', $options['heading_alignment']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_tagline', $options['tagline']);
+        update_post_meta($post_id, RWMo_PREFIX . 'post_tagline_alignment', $options['tagline_alignment']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_url', $options['action_url']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_sidebar', $options['show_sidebar']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_comments', $options['show_comments']);

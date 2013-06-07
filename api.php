@@ -24,7 +24,9 @@ if ( ! function_exists('rwm_option')) {
         
         $post_meta_options = array(
             'post_heading' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading', true),
+            'post_heading_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading_alignment', true),
             'post_tagline' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline', true),
+            'post_tagline_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline_alignment', true),
             'post_action_url' => $post_action_url,
             'show_sidebar' => rwm_show_sidebar()
         );
