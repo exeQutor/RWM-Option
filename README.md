@@ -4,14 +4,16 @@ Easily manage your Theme Options with a friendly admin interface inside WordPres
 
 ## API
 
-### `rwm_option`
+### rwm_option
 
-Use only one main function to retrieve all `options` by passing an option `key`.
+Use only one main function to retrieve all options by passing an option key.
 
-    rwm_option(key)
-    
+```
+rwm_option(key)
+```
+
 #### Parameters
 
 ##### `key`
 
-The `key` of an `option` set in either the Theme Options page or the post meta box area.
+The key of an option set in either the Theme Options page or the post meta box area.
