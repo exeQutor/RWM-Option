@@ -4,9 +4,11 @@ Easily manage your Theme Options with a friendly admin interface inside WordPres
 
 ## API
 
+There is only one function to use in retrieving an option value.
+
 ### rwm_option
 
-Use only one main function to retrieve all options by passing an option key.
+Returns the option value by passing through an option key as an argument.
 
 ```
 rwm_option(key)
@@ -14,6 +16,13 @@ rwm_option(key)
 
 #### Parameters
 
+There is only one parameter to pass through.
+
 ##### `key`
 
-The key of an option set in either the Theme Options page or the post meta box area.
+The assigned key of an option in either the Theme Options page or the post meta box area.
+
+#### List of Option Keys
+
+* [Social Profiles](https://bitbucket.org/exeQutor/rwm-option/wiki/Social)
+* [Branding Information](https://bitbucket.org/exeQutor/rwm-option/wiki/Branding)
