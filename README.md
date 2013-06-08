@@ -26,3 +26,8 @@ The assigned key of an option in either the Theme Options page or the post meta 
 
 * [Social Profiles](https://bitbucket.org/exeQutor/rwm-option/wiki/Social)
 * [Branding Information](https://bitbucket.org/exeQutor/rwm-option/wiki/Branding)
+* [Fonts & Colors](https://bitbucket.org/exeQutor/rwm-option/wiki/Typography)
+* [Blog Manager](https://bitbucket.org/exeQutor/rwm-option/wiki/Blog)
+* [Contact Page](https://bitbucket.org/exeQutor/rwm-option/wiki/Contact)
+* [Category & Archive](https://bitbucket.org/exeQutor/rwm-option/wiki/Archive)
+* [Post Inclusion](https://bitbucket.org/exeQutor/rwm-option/wiki/Inclusion)
