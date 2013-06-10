@@ -83,13 +83,33 @@ if ( ! function_exists('rwm_show_comments')) {
  */
 if ( ! function_exists('rwm_get_fonts')) {
     function rwm_get_fonts() {
-        //return rwm_option('font_general');
-        
         return array(
             rwm_option('font_general'),
             rwm_option('font_heading'),
             rwm_option('font_subheading')
         );
+    }
+}
+
+/**
+ * @since 0.1.3
+ */
+if ( ! function_exists('rwm_extract_font_family')) {
+    function rwm_extract_font_family($font_face) {
+        $font_face = str_replace('"', '', $font_face);
+        $font_face_bits = explode(',', $font_face);
+        return "'{$font_face_bits[0]}',$font_face_bits[1]";
+    }
+}
+
+/**
+ * @since 0.1.3
+ */
+if ( ! function_exists('rwm_extract_font_link')) {
+    function rwm_extract_font_link($font_face) {
+        $font_face = str_replace('"', '', $font_face);
+        $font_face_bits = explode(',', $font_face);
+        return str_replace(' ', '+', $font_face_bits[0]);
     }
 }
 
