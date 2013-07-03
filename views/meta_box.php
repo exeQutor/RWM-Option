@@ -54,6 +54,12 @@
             <td colspan="2"><input type="text" id="meta_box_action_url" name="<?php echo RWMo_PREFIX; ?>post_options[action_url]" class="text" value="<?php echo $options['action_url']; ?>" /></td>
         </tr>
         <tr>
+            <th colspan="2"><label for="meta_box_action_text">Action Text</label></th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="meta_box_action_text" name="<?php echo RWMo_PREFIX; ?>post_options[action_text]" class="text" value="<?php echo $options['action_text']; ?>" /></td>
+        </tr>
+        <tr>
             <th><label for="meta_box_show_sidebar">Sidebar Visibility</label></th>
             <td>
                 <select id="meta_box_show_sidebar" name="<?php echo RWMo_PREFIX; ?>post_options[show_sidebar]">

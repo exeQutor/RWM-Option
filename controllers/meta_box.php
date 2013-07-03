@@ -38,6 +38,7 @@ class RWMo_Meta_Box {
             'tagline' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline', true),
             'tagline_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline_alignment', true),
             'action_url' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url', true),
+            'action_text' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text', true),
             'show_sidebar' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_sidebar', true),
             'show_comments' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_comments', true)
         );
@@ -67,6 +68,7 @@ class RWMo_Meta_Box {
         update_post_meta($post_id, RWMo_PREFIX . 'post_tagline', $options['tagline']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_tagline_alignment', $options['tagline_alignment']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_url', $options['action_url']);
+        update_post_meta($post_id, RWMo_PREFIX . 'post_action_text', $options['action_text']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_sidebar', $options['show_sidebar']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_comments', $options['show_comments']);
     }
