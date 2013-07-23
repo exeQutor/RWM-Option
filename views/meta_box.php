@@ -81,6 +81,17 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <th><label for="meta_box_show_slider">Show Slider</label></th>
+            <td>
+                <select id="meta_box_show_slider" name="<?php echo RWMo_PREFIX; ?>post_options[show_slider]">
+                <?php foreach ($yes_no_array as $key => $value): ?>
+                    <?php $selected = ($key == $options['show_slider']) ? ' selected="selected"' : ''; ?>
+                    <option value="<?php echo $key; ?>"<?php echo $selected; ?>><?php echo $value; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </td>
+        </tr>
     </table>
 
 </div>
