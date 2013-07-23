@@ -392,6 +392,21 @@ function optionsframework_options()
             'type' => 'heading'
         ),
         array(
+            'name' => 'Heading Typography',
+            'id' => 'inc_heading_font',
+            'std' => array(
+                'size' => '2em',
+                'face' => 'georgia',
+                'style' => 'bold',
+                'color' => '#bada55'
+            ),
+            'type' => 'typography',
+            'options' => array(
+                'faces' => $fonts,
+                'styles' => false
+            )
+        ),
+        array(
             'name' => 'Button Color',
             'id' => 'inc_btn_color',
             'std' => '#0088cc',
