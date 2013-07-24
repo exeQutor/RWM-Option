@@ -179,6 +179,12 @@ function optionsframework_options()
         
         // Background Colors
         array(
+            'name' => 'Main Body Background Color',
+            'id' => 'color_bg_main_body',
+            'std' => '#eeeeee',
+            'type' => 'color'
+        ),
+        array(
             'name' => 'Background Color Set #1',
             'id' => 'color_bg_set1',
             'std' => '#111111',
