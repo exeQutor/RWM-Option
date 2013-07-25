@@ -21,10 +21,16 @@ if ( ! function_exists('rwm_option')) {
         // Post Meta
         $post_action_url = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url', true);
         $post_action_url = ( ! empty($post_action_url)) ? $post_action_url : get_permalink();
+        $post_action_text = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text', true);
         
         // Show Slider
         $post_show_slider = get_post_meta($post->ID, RWMo_PREFIX . 'post_show_slider', true);
         $post_show_slider = ($post_show_slider == 'yes') ? true : false;
+        
+        // Show Action Button
+        $post_action_url_show = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true);
+        $post_action_text_show = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true);
+        $post_action_button = ($post_action_url_show == 'on' && $post_action_text_show == 'on') ? true : false;
         
         $post_meta_options = array(
             'post_heading' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading', true),
@@ -32,9 +38,11 @@ if ( ! function_exists('rwm_option')) {
             'post_tagline' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline', true),
             'post_tagline_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline_alignment', true),
             'post_action_url' => $post_action_url,
+            'post_action_text' => $post_action_text,
             'show_sidebar' => rwm_show_sidebar(),
             'show_comments' => rwm_show_comments(),
-            'show_slider' => $post_show_slider
+            'show_slider' => $post_show_slider,
+            'show_action_button' => $post_action_button
         );
         
         // If option is Post Meta
