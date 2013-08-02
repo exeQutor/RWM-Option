@@ -438,6 +438,51 @@ function optionsframework_options()
             'type' => 'heading'
         ),
         array(
+            'name' => 'Main Text',
+            'id' => 'slider_main_text',
+            'std' => array(
+                'size' => '2em',
+                'face' => 'georgia',
+                'style' => 'bold',
+                'color' => '#bada55'
+            ),
+            'type' => 'typography',
+            'options' => array(
+                'faces' => $fonts,
+                'styles' => false
+            )
+        ),
+        array(
+            'name' => 'Heading',
+            'id' => 'slider_heading',
+            'std' => array(
+                'size' => '2em',
+                'face' => 'georgia',
+                'style' => 'bold',
+                'color' => '#bada55'
+            ),
+            'type' => 'typography',
+            'options' => array(
+                'faces' => $fonts,
+                'styles' => false
+            )
+        ),
+        array(
+            'name' => 'Subheading',
+            'id' => 'slider_subheading',
+            'std' => array(
+                'size' => '2em',
+                'face' => 'georgia',
+                'style' => 'bold',
+                'color' => '#bada55'
+            ),
+            'type' => 'typography',
+            'options' => array(
+                'faces' => $fonts,
+                'styles' => false
+            )
+        ),
+        array(
             'name' => 'Button Color',
             'id' => 'slider_btn_color',
             'std' => '#0088cc',
