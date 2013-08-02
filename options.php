@@ -430,7 +430,25 @@ function optionsframework_options()
             'id' => 'inc_btn_text_color',
             'std' => '#ffffff',
             'type' => 'color'
-        )
+        ),
+        
+        /* Slider */
+        array(
+            'name' => 'Slider',
+            'type' => 'heading'
+        ),
+        array(
+            'name' => 'Button Color',
+            'id' => 'slider_btn_color',
+            'std' => '#0088cc',
+            'type' => 'color'
+        ),
+        array(
+            'name' => 'Button Text Color',
+            'id' => 'slider_btn_text_color',
+            'std' => '#ffffff',
+            'type' => 'color'
+        ),
     );
 }
 
