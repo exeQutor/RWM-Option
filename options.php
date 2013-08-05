@@ -398,7 +398,7 @@ function optionsframework_options()
             'type' => 'heading'
         ),
         array(
-            'name' => 'Heading Typography',
+            'name' => 'Heading',
             'id' => 'inc_heading_font',
             'std' => array(
                 'size' => '2em',
