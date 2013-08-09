@@ -28,9 +28,9 @@ if ( ! function_exists('rwm_option')) {
         $post_show_slider = ($post_show_slider == 'yes') ? true : false;
         
         // Show Action Button
-        $post_action_url_show = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true);
+        /*$post_action_url_show = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true);
         $post_action_text_show = get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true);
-        $post_action_button = ($post_action_url_show == 'on' && $post_action_text_show == 'on') ? true : false;
+        $post_action_button = ($post_action_url_show == 'on' && $post_action_text_show == 'on') ? true : false;*/
         
         $post_meta_options = array(
             'post_heading' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading', true),
