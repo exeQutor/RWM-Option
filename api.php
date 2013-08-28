@@ -42,7 +42,8 @@ if ( ! function_exists('rwm_option')) {
             'show_sidebar' => rwm_show_sidebar(),
             'show_comments' => rwm_show_comments(),
             'show_slider' => $post_show_slider,
-            'show_action_button' => $post_action_button
+            'show_action_button' => $post_action_button,
+            'slider_set' => get_post_meta($post->ID, RWMo_PREFIX . 'post_slider_set', true),
         );
         
         // If option is Post Meta

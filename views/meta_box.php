@@ -97,6 +97,18 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <th><label for="meta_box_slider_set">Slider Set</label></th>
+            <td>
+                <select id="meta_box_slider_set" name="<?php echo RWMo_PREFIX; ?>post_options[slider_set]">
+                <option value="0">All Sets</option>
+                <?php foreach ($slider_sets as $slider_set): ?>
+                    <?php $selected = ($slider_set->slider_group_id == $options['slider_set']) ? ' selected="selected"' : ''; ?>
+                    <option value="<?php echo $slider_set->slider_group_id; ?>"<?php echo $selected; ?>><?php echo $slider_set->slider_group_name; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </td>
+        </tr>
     </table>
 
 </div>

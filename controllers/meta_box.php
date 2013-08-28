@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @package RWM Options
+ * @package RWM Options / Meta Box
  * @author Randolph
- * @since 0.1.0
+ * @since 0.1.1
  */
 
 class RWMo_Meta_Box {
@@ -37,6 +37,8 @@ class RWMo_Meta_Box {
             'no' => 'No'
         );
         
+        $slider_sets = rwm_slider_groups();
+        
         $options = array(
             'heading' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading', true),
             'heading_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_heading_alignment', true),
@@ -48,7 +50,8 @@ class RWMo_Meta_Box {
             'action_text_show' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text_show', true),
             'show_sidebar' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_sidebar', true),
             'show_comments' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_comments', true),
-            'show_slider' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_slider', true)
+            'show_slider' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_slider', true),
+            'slider_set' => get_post_meta($post->ID, RWMo_PREFIX . 'post_slider_set', true)
         );
         
         include RWMo_DIR . 'views/meta_box.php';
@@ -82,9 +85,8 @@ class RWMo_Meta_Box {
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_sidebar', $options['show_sidebar']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_comments', $options['show_comments']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_slider', $options['show_slider']);
+        update_post_meta($post_id, RWMo_PREFIX . 'post_slider_set', $options['slider_set']);
     }
 }
 
-/**
- * @filesource ./controllers/meta_box.php
- */
+// ./controllers/meta_box.php
