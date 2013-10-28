@@ -52,14 +52,14 @@
         </tr>
         <tr>
             <?php $checked = ($options['action_url_show'] == 'on') ? ' checked="tre"': ''; ?>
-            <th colspan="2"><input type="checkbox" id="meta_box_action_url_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_url_show]"<?php echo $checked; ?> /> <label for="meta_box_action_url">Action URL</label></th>
+            <th colspan="2"><input type="checkbox" id="meta_box_action_url_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_url_show]"<?php echo $checked; ?> checked="checked" /> <label for="meta_box_action_url">Action URL</label></th>
         </tr>
         <tr>
             <td colspan="2"><input type="text" id="meta_box_action_url" name="<?php echo RWMo_PREFIX; ?>post_options[action_url]" class="text" value="<?php echo $options['action_url']; ?>" /></td>
         </tr>
         <tr>
             <?php $checked = ($options['action_text_show'] == 'on') ? ' checked="tre"': ''; ?>
-            <th colspan="2"><input type="checkbox" id="meta_box_action_text_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_text_show]"<?php echo $checked; ?> /> <label for="meta_box_action_text">Action Text</label></th>
+            <th colspan="2"><input type="checkbox" id="meta_box_action_text_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_text_show]"<?php echo $checked; ?> checked="checked" /> <label for="meta_box_action_text">Action Text</label></th>
         </tr>
         <tr>
             <td colspan="2"><input type="text" id="meta_box_action_text" name="<?php echo RWMo_PREFIX; ?>post_options[action_text]" class="text" value="<?php echo $options['action_text']; ?>" /></td>
