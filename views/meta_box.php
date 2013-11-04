@@ -19,12 +19,13 @@
 
     <table width="100%">
         <tr>
-            <th><label for="meta_box_heading">Heading</label></th><th><label for="meta_box_heading_alignment">Alignment</label></th>
-        </tr>
-        <tr>
+            <th width="25%"><label for="meta_box_heading">Heading</label></th>
             <td>
                 <input type="text" id="meta_box_heading" name="<?php echo RWMo_PREFIX; ?>post_options[heading]" class="text" value="<?php echo $options['heading']; ?>" />
             </td>
+        </tr>
+        <tr>
+            <th><label for="meta_box_heading_alignment">Heading Alignment</label></th>
             <td>
                 <select id="meta_box_heading_alignment" name="<?php echo RWMo_PREFIX; ?>post_options[heading_alignment]">
                 <?php foreach ($text_alignment_array as $key => $value): ?>
@@ -35,12 +36,13 @@
             </td>
         </tr>
         <tr>
-            <th><label for="meta_box_tagline">Tagline</label></th><th><label for="meta_box_tagline_alignment">Alignment</label></th>
-        </tr>
-        <tr>
+            <th><label for="meta_box_tagline">Tagline</label></th>
             <td>
                 <input type="text" id="meta_box_tagline" name="<?php echo RWMo_PREFIX; ?>post_options[tagline]" class="text" value="<?php echo $options['tagline']; ?>" />
             </td>
+        </tr>
+        <tr>
+            <th><label for="meta_box_tagline_alignment">Tagline Alignment</label></th>
             <td>
                 <select id="meta_box_tagline_alignment" name="<?php echo RWMo_PREFIX; ?>post_options[tagline_alignment]">
                 <?php foreach ($text_alignment_array as $key => $value): ?>
@@ -51,18 +53,29 @@
             </td>
         </tr>
         <tr>
-            <?php $checked = ($options['action_url_show'] == 'on') ? ' checked="tre"': ''; ?>
-            <th colspan="2"><input type="checkbox" id="meta_box_action_url_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_url_show]"<?php echo $checked; ?> checked="checked" /> <label for="meta_box_action_url">Action URL</label></th>
+            <td colspan="2"><hr /></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="text" id="meta_box_action_url" name="<?php echo RWMo_PREFIX; ?>post_options[action_url]" class="text" value="<?php echo $options['action_url']; ?>" /></td>
+            <th><label for="meta_box_show_action">Action Visibility</label></th>
+            <td>
+                <select id="meta_box_show_action" name="<?php echo RWMo_PREFIX; ?>post_options[show_action]">
+                <?php foreach ($yes_no_array as $key => $value): ?>
+                    <?php $selected = ($key == $options['show_action']) ? ' selected="selected"' : ''; ?>
+                    <option value="<?php echo $key; ?>"<?php echo $selected; ?>><?php echo $value; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </td>
         </tr>
         <tr>
-            <?php $checked = ($options['action_text_show'] == 'on') ? ' checked="tre"': ''; ?>
-            <th colspan="2"><input type="checkbox" id="meta_box_action_text_show" name="<?php echo RWMo_PREFIX; ?>post_options[action_text_show]"<?php echo $checked; ?> checked="checked" /> <label for="meta_box_action_text">Action Text</label></th>
+            <th><label for="meta_box_action_url">Action URL</label></th>
+            <td><input type="text" id="meta_box_action_url" name="<?php echo RWMo_PREFIX; ?>post_options[action_url]" class="text" value="<?php echo $options['action_url']; ?>" /></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="text" id="meta_box_action_text" name="<?php echo RWMo_PREFIX; ?>post_options[action_text]" class="text" value="<?php echo $options['action_text']; ?>" /></td>
+            <th><label for="meta_box_action_text">Action Text</label></th>
+            <td><input type="text" id="meta_box_action_text" name="<?php echo RWMo_PREFIX; ?>post_options[action_text]" class="text" value="<?php echo $options['action_text']; ?>" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr /></td>
         </tr>
         <tr>
             <th><label for="meta_box_show_sidebar">Sidebar Visibility</label></th>
@@ -85,6 +98,9 @@
                 <?php endforeach; ?>
                 </select>
             </td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr /></td>
         </tr>
         <tr>
             <th><label for="meta_box_show_slider">Show Slider</label></th>
