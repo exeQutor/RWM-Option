@@ -8,8 +8,15 @@
 
 class RWMo_Meta_Box {
     function __construct() {
+        add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
         add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
         add_action('save_post', array($this, 'save_post'));
+    }
+    
+    function admin_enqueue_scripts() {
+        wp_enqueue_style('rwm-option', RWMo_URL.'assets/css/admin.css');
+        wp_enqueue_script('jquery-ui-tooltip');
+        wp_enqueue_script('rwm-option', RWMo_URL.'assets/js/admin.js', array('jquery'), '1.0.0', true);
     }
     
     function add_meta_boxes() {
