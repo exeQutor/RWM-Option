@@ -5,11 +5,11 @@ Plugin Name: RWM Options
 Plugin URI: http://www.realworldmedia.com.au/
 Description: Manage your post and theme options with this neat plugin.
 Author: Real World Media
-Version: 0.1.7
+Version: 0.1.8
 Author URI: http://www.realworldmedia.com.au/
 */
 
-define('RWMo_VERSION', '0.1.7');
+define('RWMo_VERSION', '0.1.8');
 define('RWMo_DIR', trailingslashit(plugin_dir_path(__FILE__)));
 define('RWMo_URL', trailingslashit(plugin_dir_url(__FILE__)));
 define('RWMo_FILE', __FILE__);
@@ -21,4 +21,3 @@ define('RWMo_PREFIX', 'rwmo_');
 require_once(RWMo_DIR . 'controllers/meta_box.php'); new RWMo_Meta_Box;
 require_once(RWMo_DIR . 'libraries/options-framework/options-framework.php'); // need to remove this some time
 require_once(RWMo_DIR . 'api.php');
-

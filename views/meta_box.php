@@ -78,6 +78,20 @@
             <td colspan="2"><hr /></td>
         </tr>
         <tr>
+            <th><label for="meta_box_post_layout">Post Layout</label></th>
+            <td>
+                <select id="meta_box_post_layout" class="rwm-tooltip" name="<?php echo RWMo_PREFIX; ?>post_options[post_layout]" title="Single Post Layout">
+                <?php foreach ($post_layout_array as $key => $value): ?>
+                    <?php $selected = ($key == $options['post_layout']) ? ' selected="selected"' : ''; ?>
+                    <option value="<?php echo $key; ?>"<?php echo $selected; ?>><?php echo $value; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr /></td>
+        </tr>
+        <tr>
             <th><label for="meta_box_show_sidebar">Sidebar Visibility</label></th>
             <td>
                 <select id="meta_box_show_sidebar" class="rwm-tooltip" name="<?php echo RWMo_PREFIX; ?>post_options[show_sidebar]" title="Show Sidebar">

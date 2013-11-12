@@ -3,7 +3,7 @@
 /**
  * @package RWM Options / Meta Box
  * @author Randolph
- * @since 0.1.2
+ * @since 0.1.3
  */
 
 class RWMo_Meta_Box {
@@ -33,6 +33,11 @@ class RWMo_Meta_Box {
             'right' => 'Right'
         );
         
+        $post_layout_array = array(
+            'type1' => 'Type 1',
+            'type2' => 'Type 2'
+        );
+        
         $show_hide_array = array(
             'inherit' => 'Inherit',
             'show' => 'Show',
@@ -53,9 +58,8 @@ class RWMo_Meta_Box {
             'tagline_alignment' => get_post_meta($post->ID, RWMo_PREFIX . 'post_tagline_alignment', true),
             'show_action' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_action', true),
             'action_url' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url', true),
-            'action_url_show' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url_show', true), // --> should be removed on 0.1.3
             'action_text' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text', true),
-            'action_text_show' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text_show', true), // --> should be removed on 0.1.3
+            'post_layout' => get_post_meta($post->ID, RWMo_PREFIX . 'post_single_layout', true),
             'show_sidebar' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_sidebar', true),
             'show_comments' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_comments', true),
             'show_slider' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_slider', true),
@@ -86,19 +90,10 @@ class RWMo_Meta_Box {
         update_post_meta($post_id, RWMo_PREFIX . 'post_heading_alignment', $options['heading_alignment']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_tagline', $options['tagline']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_tagline_alignment', $options['tagline_alignment']);
+        update_post_meta($post_id, RWMo_PREFIX . 'post_single_layout', $options['post_layout']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_action', $options['show_action']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_url', $options['action_url']);
-        update_post_meta($post_id, RWMo_PREFIX . 'post_action_url_show', $options['action_url_show']);
-        
-        //if (isset($options['action_url_show']))
-            //update_post_meta($post_id, RWMo_PREFIX . 'post_action_url_show', $options['action_url_show'] == 'on' ? 'on' : 'off');
-        
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_text', $options['action_text']);
-        update_post_meta($post_id, RWMo_PREFIX . 'post_action_text_show', $options['action_text_show']);
-        
-        //if (isset($options['action_text_show']))
-            //update_post_meta($post_id, RWMo_PREFIX . 'post_action_text_show', $options['action_text_show'] == 'on' ? 'on' : 'off');
-            
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_sidebar', $options['show_sidebar']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_comments', $options['show_comments']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_slider', $options['show_slider']);
