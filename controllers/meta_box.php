@@ -49,6 +49,17 @@ class RWMo_Meta_Box {
             'no' => 'No'
         );
         
+        /**
+         * Inclusion Button Style
+         * @since 0.1.9
+         */
+        $btn_style_array = array(
+            'inherit' => 'Inherit',
+            'square' => 'Square',
+            'round' => 'Round',
+            'text' => 'Text'
+        );
+        
         $slider_sets = rwm_slider_groups();
         
         $options = array(
@@ -59,6 +70,13 @@ class RWMo_Meta_Box {
             'show_action' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_action', true),
             'action_url' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_url', true),
             'action_text' => get_post_meta($post->ID, RWMo_PREFIX . 'post_action_text', true),
+            
+            /**
+             * Inclusion Button Style
+             * @since 0.1.9
+             */
+            'inc_btn_style' => get_post_meta($post->ID, RWMo_PREFIX . 'post_inc_btn_style', true),
+            
             'post_layout' => get_post_meta($post->ID, RWMo_PREFIX . 'post_single_layout', true),
             'show_sidebar' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_sidebar', true),
             'show_comments' => get_post_meta($post->ID, RWMo_PREFIX . 'post_show_comments', true),
@@ -94,6 +112,13 @@ class RWMo_Meta_Box {
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_action', $options['show_action']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_url', $options['action_url']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_action_text', $options['action_text']);
+        
+        /**
+         * Inclusion Button Style
+         * @since 0.1.9
+         */
+        update_post_meta($post_id, RWMo_PREFIX . 'post_inc_btn_style', $options['inc_btn_style']);
+        
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_sidebar', $options['show_sidebar']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_comments', $options['show_comments']);
         update_post_meta($post_id, RWMo_PREFIX . 'post_show_slider', $options['show_slider']);
